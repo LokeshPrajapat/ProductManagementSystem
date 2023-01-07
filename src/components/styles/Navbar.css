@@ -1,0 +1,85 @@
+* {
+
+    padding: 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+.nav-links {
+
+    padding: 0.5rem;
+
+    justify-content: flex-end;
+
+    position: relative;
+
+    align-items: flex-end;
+
+}
+
+
+
+.nav-links:hover {
+
+    background-color: #e7ab3c;
+
+    color: #f0f0f2;
+
+    cursor: pointer;
+
+    transition: ease-out all 0.2s;
+
+}
+
+
+
+.logo {
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+}
+
+
+
+.logo h2 {
+
+    color: #e7ab3c;
+
+    font-family: 'Dancing Script', cursive;
+
+    justify-content: flex-start;
+
+    align-items: flex-start;
+
+}
+
+
+
+.logo h2::before {
+
+    content: '\003c';
+
+    color: #e7ab3c;
+
+    font-size: 3rem;
+
+}
+
+
+
+.logo h2::after {
+
+    content: '\003e';
+
+    color: #e7ab3c;
+
+    font-size: 3rem;
+
+}
