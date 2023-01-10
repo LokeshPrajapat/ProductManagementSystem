@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
-import { useUserAuth } from "../context/UserAuthContext";
-
+import { useUserAuth } from "../../context/UserAuthContext";
+import "../styles/LoginSignup.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,8 +16,12 @@ const Login = () => {
     e.preventDefault();
     setError("");
     try {
-      await logIn(email, password);
-      navigate("/logout");
+      if(email === "admin.lokesh@gmail.com" && password === "admin@123" ){
+        navigate("/dashboard")
+      }else{
+        await logIn(email, password);
+        navigate("/logout");
+      }
     } catch (err) {
       setError(err.message);
     }
@@ -76,8 +80,7 @@ const Login = () => {
   //   </>
   // );
   return (
-    <div class="container">
-      <h1>Product Management System</h1>
+    <div class="container2">
       <div class="screen">
         <div class="screen__content">
           {error && <Alert variant="danger">{error}</Alert>}
@@ -96,24 +99,14 @@ const Login = () => {
             </button>
           </form>
           <div class="social-login">
-            {/* <h3>log in via</h3>
-				<div class="social-icons">
-					<a href="#" class="social-login__icon fab fa-instagram"></a>
-					<a href="#" class="social-login__icon fab fa-facebook"></a>
-					<a href="#" class="social-login__icon fab fa-twitter"></a>
-				</div> */}
-
             <hr />
             <div className="social-icons">
               <GoogleButton className="social-login__ic" type="dark" onClick={handleGoogleSignIn} />
             </div>
           </div>
-          <div className="p-4 box mt-3 text-center">
-            Don't have an account? <Link to="/signup">Sign up</Link>
+          <div className="p-2 box mt-3 text-center">
+            Don't have an account? <Link to="/signup" style={{color:"white", textDecoration:"none"}}>Sign up</Link>
           </div>
-
-
-
         </div>
         <div class="screen__background">
           <span class="screen__background__shape screen__background__shape4"></span>

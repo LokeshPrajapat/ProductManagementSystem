@@ -4,6 +4,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart, AiOutlineLogin, AiOutlineHome } from "react-icons/ai";
+import {FiShoppingBag} from "react-icons/fi"
 import "../styles/Navbar.css";
 
 
@@ -13,7 +14,7 @@ const Navigation = () => {
             <Navbar bg="light" expand="xxl">
                 <Container fluid>
                     <Navbar.Brand className="logo">
-                        <h2>Product store /</h2>
+                        <h2>Product Store<FiShoppingBag /> </h2>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-xxl`} />
                     <Navbar.Offcanvas

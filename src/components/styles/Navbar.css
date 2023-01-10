@@ -64,22 +64,14 @@
 
 .logo h2::before {
 
-    content: '\003c';
-
     color: #e7ab3c;
-
     font-size: 3rem;
-
 }
 
 
 
 .logo h2::after {
-
-    content: '\003e';
-
     color: #e7ab3c;
-
     font-size: 3rem;
 
 }

@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "prodName": "Earphones",
+      "prodCat": "Electronics",
+      "prodUrl": "http://cdn.shopify.com/s/files/1/1676/7297/products/1MainImage3_grande.jpg?v=1620280054",
+      "prodPrice": "1100"
+    },
+    {
+      "prodName": "Laptop",
+      "prodCat": "Electronics",
+      "prodUrl": "https://www.lidl.be/assets/gcpc90f48fd132248cda1339adaaa385caf.jpeg",
+      "prodPrice": "49200",
+      "id": "2"
+    },
+    {
+      "prodName": "AmulCheese",
+      "prodCat": "Grocery",
+      "prodUrl": "https://www.bigbasket.com/media/uploads/p/l/104808_9-amul-cheese-slices.jpg",
+      "prodPrice": "180",
+      "id": "3"
+    },
+    {
+      "prodName": "Wheat Atta Chakki Fresh",
+      "prodCat": "Grocery",
+      "prodUrl": "https://www.bigbasket.com/media/uploads/p/s/40099239_9-bb-royal-chakki-fresh-wheat-atta-fortified.jpg",
+      "prodPrice": "369",
+      "id": "4"
+    },
+    {
+      "prodName": "Californian Almond",
+      "prodCat": "Grocery",
+      "prodUrl": "https://www.bigbasket.com/media/uploads/p/s/40202556_1-super-saver-californian-almond.jpg",
+      "prodPrice": "309",
+      "id": "5"
+    }
+  ]
+}
