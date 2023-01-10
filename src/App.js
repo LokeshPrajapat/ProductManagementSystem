@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+import logo from './logo.svg';
+import './App.css';
+import MyState from './context/MyState';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Header from './components/Header';
+import Cart from './components/Cart';
+import Bill from './components/Bill';
+import ViewDescription from './components/ViewDescription';
+import BillPreview from './components/BillPreview';
+
+
+
+function App() {
+  return (
+    <div className="App">
+      {/* Mystate is context so all the data is 
+      available in the componetst inside the Mystate tag */}
+      {/* <Bill /> */}
+      <MyState>
+    
+      <BrowserRouter>
+      <Header />
+      
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/viewdescription" element={<ViewDescription />}></Route>
+        <Route path="/billpreview" element={<BillPreview />}></Route>
+      </Routes>
+      </BrowserRouter>
+      </MyState>
+      
+    </div>
+=======
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import Login from "./components/pages/Login";
@@ -47,6 +83,7 @@ function App() {
           <Footer />
         </UserAuthContextProvider>
       </div>
+>>>>>>> 4952b72e35ebcd363a8b6e4ec88735327097d856
   );
 }
 
