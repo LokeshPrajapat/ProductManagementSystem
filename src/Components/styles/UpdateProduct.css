@@ -12,3 +12,18 @@
     font-family: 'Times New Roman', Times, serif;
     padding: 0.3rem;
 }
+
+.card{
+  background-color: #e7ab3c;
+}
+
+.btn-update{
+  width: 15rem;
+  border: none;
+  padding: 5px;
+  background-color:#3D405B;
+  color: white;
+}
+.shadow{
+  box-shadow: #3D405B 0px 3px 8px;
+}

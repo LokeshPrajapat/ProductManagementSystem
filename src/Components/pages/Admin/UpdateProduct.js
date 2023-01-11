@@ -42,7 +42,7 @@ const UpdateProduct = () => {
 
   return (
     <div className="container py-5">
-      <div className="card border-0 shadow p-3 mx-auto" style={{ width: '30rem' }}>
+      <div className="shadow card border-0 p-3 mx-auto" style={{ width: '30rem', backgroundColor:"#e7ab3c" }}>
         <form>
           <h3 className="form-header nav-background">Update Product</h3>
           <div className="form-group ">
@@ -94,7 +94,7 @@ const UpdateProduct = () => {
             />
           </div>
           <br />
-          <button className="button btn btn-success" type="submit" onClick={(e) => updateDetils(e, product)}>Update</button>
+          <button className="button btn-update " type="submit" onClick={(e) => updateDetils(e, product)}>Update</button>
         </form>
       </div>
       <ToastContainer />

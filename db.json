@@ -34,6 +34,20 @@
       "prodUrl": "https://www.bigbasket.com/media/uploads/p/s/40202556_1-super-saver-californian-almond.jpg",
       "prodPrice": "309",
       "id": "5"
+    },
+    {
+      "id": "745",
+      "prodName": "Open Shoulder Solid Halter Sweater",
+      "prodCat": "Women's Clothing",
+      "prodUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT6u4aXm0LCggYpWPBSl4SIyAvGxZT7p8iVFEaRxy1Kc_0Yq71nsAjITraHES-q7fu1E4uRWytR7yUIufN_MzyYl2JMi0wIpPKxnD-p_tMnzx-vXRLqnmHZ",
+      "prodPrice": "399"
+    },
+    {
+      "id": "245",
+      "prodName": "Printed Women Blue Top",
+      "prodCat": "Women's Clothing",
+      "prodUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSmQx7ITV1UIKt-HXw3KUUR5gHKHK5e9h08Tn5WN82YIhur0oRLvpcpJzCE4NJvvm_o2ofbwrVztwUTaRbxQS5hVEjK1T6kHePJUSno37WMIxW4kGqeW36u5Q",
+      "prodPrice": "520"
     }
   ]
 }

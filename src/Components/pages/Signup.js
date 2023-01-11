@@ -10,6 +10,8 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
+  const [ContactNumber, setContactNumber] = useState("");
+  const [fullName, setFullName] = useState("");
   const { signUp } = useUserAuth();
   let navigate = useNavigate();
 
@@ -57,18 +59,27 @@ const Signup = () => {
       </div> */}
 
 <div class="container2">
-      <div class="screen">
+      <div class="SignUpScreen">
         <div class="screen__content">
         {error && <Alert variant="danger">{error}</Alert>}
           <form class="login" onSubmit={handleSubmit}>
+          <div class="login__field">
+              <i class="login__icon fas fa-lock"></i>
+              <input type="text" required class="login__input" controlId="fullName" placeholder="Fullname" onChange={(e) => setFullName(e.target.value)} />
+            </div>
             <div class="login__field">
               <i class="login__icon fas fa-user"></i>
-              <input type="text" class="login__input" controlId="formBasicEmail" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
+              <input type="text"required class="login__input" controlId="formBasicEmail" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
             </div>
             <div class="login__field">
               <i class="login__icon fas fa-lock"></i>
-              <input type="password" class="login__input" controlId="formBasicPassword" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+              <input type="password" required class="login__input" controlId="formBasicPassword" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
             </div>
+            <div class="login__field">
+              <i class="login__icon fas fa-lock"></i>
+              <input type="text" required class="login__input" controlId="formBasicContactNumber" placeholder="ContactNumber" onChange={(e) => setContactNumber(e.target.value)} />
+            </div>
+            
             <button class="button login__submit" type="Submit">
               <span class="button__text">Sign up</span>
               <i class="button__icon fas fa-chevron-right"></i>

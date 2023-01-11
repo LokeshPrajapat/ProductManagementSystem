@@ -43,29 +43,17 @@ const Navigation = () => {
                                         Electronics
                                     </NavDropdown.Item>
                                     <NavDropdown.Item href="#action5">
-
                                         Grocery
-
                                     </NavDropdown.Item>
-
                                 </NavDropdown>
-
                                 <Nav.Link href="/" className="nav-links">Cart <AiOutlineShoppingCart /></Nav.Link>
-
                                 <Nav.Link href="/login" className="nav-links">SignIn <AiOutlineLogin /></Nav.Link>
-
                             </Nav>
-
                         </Offcanvas.Body>
-
                     </Navbar.Offcanvas>
-
                 </Container>
-
             </Navbar>
-
         </div>
-    )
+   )
 }
-
 export default Navigation

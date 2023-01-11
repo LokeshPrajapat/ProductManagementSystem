@@ -11,6 +11,7 @@ import Home from "./components/pages/Home";
 import Dashboard from "./components/pages/Admin/Dashboard";
 import 'react-toastify/dist/ReactToastify.css';
 import UpdateProduct from "./components/pages/Admin/UpdateProduct";
+import AddNew from "./components/pages/Admin/AddNew";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route exact path="/signup" element={<Signup/>}/>
             <Route exact path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route exact path="/updateproduct" element={<ProtectedRoute><UpdateProduct/></ProtectedRoute>} />
+            <Route exact path="/add" element={<ProtectedRoute><AddNew /></ProtectedRoute>} />
           </Routes>
           <Footer />
         </UserAuthContextProvider>
