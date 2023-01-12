@@ -15,22 +15,22 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     const fetchProducts = async () => {
-        const data = await fetch("http://localhost:5000/products")
+        const data = await fetch("http://localhost:4000/products")
         const parsedData = await data.json()
         setViewData(parsedData)
-        //console.log("data: ", viewData)
+        console.log("data: ", viewData)
     }
 
     const DeleteProduct = async (id) => {
         console.log("id received", id)
-        const data=await fetch(`http://localhost:5000/products/${id}`, {method:'delete'})
+        const data=await fetch(`http://localhost:4000/products/${id}`, {method:'delete'})
         toast.success('Product Deleted successfully!!', {autoClose:3000})
         const response =await data.json();
         fetchProducts();
     }
 
     const getProductById = async(id)=>{
-        const data=await fetch(`http://localhost:5000/products/${id}`)
+        const data=await fetch(`http://localhost:4000/products/${id}`)
          const response =await data.json();
          console.log(response)
          navigate("/updateproduct" , {state:{product:response}})
@@ -51,9 +51,12 @@ const Dashboard = () => {
                             <Card className='card-prod'>
                                <Card.Img variant="top" src={item.prodUrl} className="card-img"/>
                                 <Card.Body>
-                                <Card.Title>{item.prodName}</Card.Title>
+                                <Card.Title style={{fontWeight:"300",fontSize:"20px"}}>{item.prodName}</Card.Title>
                                 <Card.Text>
                                     Category : {item.prodCat}
+                                </Card.Text>
+                                <Card.Text>
+                                    Description : {item.description}
                                 </Card.Text>
                                 <Card.Text className='price'>
                                     Price : <BiRupee /> {item.prodPrice}

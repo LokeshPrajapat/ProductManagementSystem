@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Form } from 'react-bootstrap';
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from 'react-toastify';
 import "../../styles/UpdateProduct.css"
 
@@ -29,11 +29,15 @@ const UpdateProduct = () => {
         prodName: item.prodName,
         prodCat: item.prodCat,
         prodUrl: item.prodUrl,
-        prodPrice: item.prodPrice
+        prodPrice: item.prodPrice,
+        instock: item.instock,
+        fastDelivery: item.fastDelivery,
+        description:item.description,
+        rating: item.rating
       }),
       'headers': { "Content-type": "application/json" }
     }
-    const data = await fetch(`http://localhost:5000/products/${item.id}`, requestOptions)
+    const data = await fetch(`http://localhost:4000/products/${item.id}`, requestOptions)
     const response = await data.json();
     // toast.success("Product Updated Success")
     console.log("item: ", item)
@@ -81,6 +85,18 @@ const UpdateProduct = () => {
             />
           </div>
           <br />
+          <div className="form-group">
+            <label htmlFor="text">Product Description: </label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter Product Description"
+              name="description"
+              defaultValue={product.description}
+              onChange={onChangeHandler}
+            />
+          </div>
+          <br />
           <div className="form-group" style={{heigth:"4rem"}}>
             <label htmlFor="text">Product Image Url: </label>
             <textarea
@@ -94,8 +110,30 @@ const UpdateProduct = () => {
             />
           </div>
           <br />
-          <button className="button btn-update " type="submit" onClick={(e) => updateDetils(e, product)}>Update</button>
+          <div className="form-group">
+            <label>Product Fast Delivery </label>
+              <Form.Select className="form-select" name="fastDelivery" value={product.fastDelivery} onChange={onChangeHandler}>
+              <option value="true">true</option>
+              <option value="false">false </option>
+              </Form.Select>
+          </div>
+          <br />
+
+          <div className="form-group">
+            <label>Rating </label>
+              <Form.Select className="form-select" name="rating" value={product.rating} onChange={onChangeHandler}>
+              <option value="1">1</option>
+              <option value="2">2 </option>
+              <option value="3">3 </option>
+              <option value="4">4 </option>
+              <option value="5">5 </option>
+              </Form.Select>
+          </div>
+          <br />
         </form>
+        <button className="button btn-update " type="submit" onClick={(e) => updateDetils(e, product)}>Update</button>
+        <br />
+        <button className='button btn-cancel'><Link to="/dashboard" style={{color:"#3D405B", textDecoration:"none"}}>Cancel</Link></button>
       </div>
       <ToastContainer />
     </div>

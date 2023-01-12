@@ -9,7 +9,7 @@ import {
   Container,
 } from "reactstrap";
 import {BiRupee} from 'react-icons/bi'
-import Context from "../context/Context";
+import Context from "../../../context/Context";
 import { Button, Form } from "react-bootstrap";
 
 

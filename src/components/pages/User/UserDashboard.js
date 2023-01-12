@@ -1,14 +1,19 @@
 import React, { useContext, useEffect } from 'react'
-import Context from '../context/Context'
+import Context from '../../../context/Context'
 import Filter from './Filter';
 import SingleProduct from './SingleProduct'
-import './styles.css';
-const Home = () => {
-    const data =useContext(Context)
+import "../../styles/UserStyles.css"
+import { MyNewState } from '../../../context/MyState';
+
+const UserDashboard = () => {
+    const data = useContext(Context)
     useEffect(()=>{data.fetchProduct()},[])
-    console.log(data.product)
+
+    console.log(data,"product")
+
     const products=data.product;
-    console.log(products)
+
+    console.log("products: ", products)
     let {byStock,byFastDelivery,byRating,sort,bySearchQuery}=data.productState
 
     const transformedProducts=()=>{
@@ -48,4 +53,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default UserDashboard;

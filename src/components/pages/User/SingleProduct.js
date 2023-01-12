@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import Context from "../context/Context";
+import Context from "../../../context/Context";
 
 const SingleProduct = ({ product }) => {
   const navigate = useNavigate();

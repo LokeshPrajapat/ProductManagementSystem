@@ -1,17 +1,36 @@
 {
-  "products": [
+  "UserProducts": [
     {
-      "id": "1",
-      "prodName": "Earphones",
-      "prodCat": "Electronics",
-      "prodUrl": "http://cdn.shopify.com/s/files/1/1676/7297/products/1MainImage3_grande.jpg?v=1620280054",
-      "prodPrice": "1100"
+      "id": 5,
+      "productName": "Samsung remote",
+      "price": 5000,
+      "image": "https://images.samsung.com/is/image/samsung/in-full-hd-tv-te50fa-ua43te50fakxxl-frontblack-231881877?$650_519_PNG$",
+      "instock": 10,
+      "fastDelivery": true,
+      "description": "This is the best tv",
+      "rating": 3
     },
+    {
+      "productName": "Camera",
+      "price": "500000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTowoB1NpM7qxVyRKG1LOp5RxiWfEPWqkjCAulrVWTp-A&s",
+      "instock": "9",
+      "fastDelivery": true,
+      "description": "This is the canon camera",
+      "rating": "5",
+      "id": 8
+    }
+  ],
+  "products": [
     {
       "prodName": "Laptop",
       "prodCat": "Electronics",
       "prodUrl": "https://www.lidl.be/assets/gcpc90f48fd132248cda1339adaaa385caf.jpeg",
       "prodPrice": "49200",
+      "instock": 10,
+      "fastDelivery": "false",
+      "description": "This is the best tv",
+      "rating": "4",
       "id": "2"
     },
     {
@@ -19,35 +38,77 @@
       "prodCat": "Grocery",
       "prodUrl": "https://www.bigbasket.com/media/uploads/p/l/104808_9-amul-cheese-slices.jpg",
       "prodPrice": "180",
-      "id": "3"
+      "id": "3",
+      "instock": 10,
+      "fastDelivery": true,
+      "description": "This is the best tv",
+      "rating": 3
     },
     {
       "prodName": "Wheat Atta Chakki Fresh",
       "prodCat": "Grocery",
       "prodUrl": "https://www.bigbasket.com/media/uploads/p/s/40099239_9-bb-royal-chakki-fresh-wheat-atta-fortified.jpg",
       "prodPrice": "369",
-      "id": "4"
+      "id": "4",
+      "instock": 10,
+      "fastDelivery": true,
+      "description": "This is the best tv",
+      "rating": 3
     },
     {
       "prodName": "Californian Almond",
       "prodCat": "Grocery",
       "prodUrl": "https://www.bigbasket.com/media/uploads/p/s/40202556_1-super-saver-californian-almond.jpg",
       "prodPrice": "309",
-      "id": "5"
+      "id": "5",
+      "instock": 10,
+      "fastDelivery": true,
+      "description": "This is the best tv",
+      "rating": 3
     },
     {
       "id": "745",
       "prodName": "Open Shoulder Solid Halter Sweater",
       "prodCat": "Women's Clothing",
       "prodUrl": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT6u4aXm0LCggYpWPBSl4SIyAvGxZT7p8iVFEaRxy1Kc_0Yq71nsAjITraHES-q7fu1E4uRWytR7yUIufN_MzyYl2JMi0wIpPKxnD-p_tMnzx-vXRLqnmHZ",
-      "prodPrice": "399"
+      "prodPrice": "399",
+      "instock": 10,
+      "fastDelivery": true,
+      "description": "This is the best tv",
+      "rating": 3
     },
     {
       "id": "245",
       "prodName": "Printed Women Blue Top",
       "prodCat": "Women's Clothing",
       "prodUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSmQx7ITV1UIKt-HXw3KUUR5gHKHK5e9h08Tn5WN82YIhur0oRLvpcpJzCE4NJvvm_o2ofbwrVztwUTaRbxQS5hVEjK1T6kHePJUSno37WMIxW4kGqeW36u5Q",
-      "prodPrice": "520"
+      "prodPrice": "520",
+      "instock": 10,
+      "fastDelivery": true,
+      "description": "This is the best tv",
+      "rating": 3
+    },
+    {
+      "id": "196",
+      "prodName": "Samsung Remote",
+      "prodCat": "Electronics",
+      "prodUrl": "https://images.samsung.com/is/image/samsung/in-full-hd-tv-te50fa-ua43te50fakxxl-frontblack-231881877?$650_519_PNG$",
+      "prodPrice": "800",
+      "instock": "",
+      "fastDelivery": "false",
+      "description": "Remote for tv",
+      "rating": "4"
+    },
+    {
+      "id": "53",
+      "prodName": "Men Printed Casual Multicolor Shirt",
+      "prodCat": "Men's Clothing",
+      "prodUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSoyKKYU5Lce-pBUXjWgp9g7SnYZJESXUnr0iYeylRabtxdBVn2pWGV63F834z09R5KgwAjzqtTd4BFRUT1PScqREW4g9VsLyerpOMGzk52u67Rpj_KYdVc",
+      "prodPrice": "499",
+      "instock": "",
+      "fastDelivery": "false",
+      "description": "Printed blue half sleeve shirt for men",
+      "rating": "2"
     }
   ]
 }

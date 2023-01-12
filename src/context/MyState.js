@@ -1,7 +1,7 @@
-import React, {  useReducer, useState } from 'react'
+import React, {  useContext, useReducer, useState } from 'react'
 import { cartReducer,productReducer } from './Reducer'
 import Context from './Context'
-const MyState = (props) => {
+export const MyState = (props) => {
    // faker.seed(99)
     const[product,setProduct]=useState([])
     const[allbills,setBills]=useState([])
@@ -27,14 +27,15 @@ const MyState = (props) => {
     })
     const fetchProduct=async()=>
     {
-    const data=await fetch("http://localhost:5000/Products")
-    const pasredData= await data.json()
-    console.log(pasredData)
-    setProduct(pasredData)
+        const data=await fetch("http://localhost:4000/UserProducts")
+        const pasredData= await data.json()
+        console.log("parsed: ", pasredData)
+        setProduct(pasredData)
     }
+
     const fetchAllBills=async()=>
     {
-      const data=await fetch("http://localhost:5000/Bills")
+      const data=await fetch("http://localhost:4000/Bills")
       const pasredData= await data.json()
     }
   return (
@@ -44,5 +45,6 @@ const MyState = (props) => {
         </Context.Provider></div>
   )
 }
-
-export default MyState
+export function MyNewState(){
+  return useContext(MyState)
+}

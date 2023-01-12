@@ -11,8 +11,11 @@ import { auth } from "../firebase";
 
 const userAuthContext = createContext();
 
+const adminEmail = ["lokesh.admin@gmail.com"]
+
 export function UserAuthContextProvider({ children }) {
   const [user, setUser] = useState({});
+  const [isAdmin, setIsAdmin] = useState(false)
 
   function logIn(email, password) {
     return signInWithEmailAndPassword(auth, email, password);
@@ -21,6 +24,7 @@ export function UserAuthContextProvider({ children }) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
   function logOut() {
+    setIsAdmin(false);
     return signOut(auth);
   }
   function googleSignIn() {
@@ -31,7 +35,9 @@ export function UserAuthContextProvider({ children }) {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
       console.log("Auth", currentuser);
+      const newRole = currentuser.email.includes(adminEmail) ? true : false
       setUser(currentuser);
+      setIsAdmin(newRole)
     });
 
     return () => {
@@ -41,7 +47,7 @@ export function UserAuthContextProvider({ children }) {
 
   return (
     <userAuthContext.Provider
-      value={{ user, logIn, signUp, logOut, googleSignIn }}
+      value={{ user,isAdmin,logIn, signUp, logOut, googleSignIn }}
     >
       {children}
     </userAuthContext.Provider>

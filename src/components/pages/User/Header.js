@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {FaShoppingCart} from 'react-icons/fa'
 import { Badge, Button, Dropdown, FormControl } from 'react-bootstrap';
-import Context from '../context/Context';
+import Context from '../../../context/Context';
 import {AiFillDelete} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 

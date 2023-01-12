@@ -15,12 +15,15 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    console.log(email, "email")
+
     try {
-      if(email === "admin.lokesh@gmail.com" && password === "admin@123" ){
-        navigate("/dashboard")
+        if(email === "lokesh.admin@gmail.com" && password === "admin@123" ){
+        await logIn(email, password)
+        navigate("/dashboard")       
       }else{
         await logIn(email, password);
-        navigate("/logout");
+        navigate("/userDashboard");
       }
     } catch (err) {
       setError(err.message);

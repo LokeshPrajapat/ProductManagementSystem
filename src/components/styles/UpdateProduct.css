@@ -22,7 +22,17 @@
   border: none;
   padding: 5px;
   background-color:#3D405B;
+  margin-left: 25%;
   color: white;
+}
+
+.btn-cancel{
+  margin-left: 25%;
+  width: 15rem;
+  border: none;
+  display: inline-block;
+  padding: 5px;
+  color: #3D405B;
 }
 .shadow{
   box-shadow: #3D405B 0px 3px 8px;

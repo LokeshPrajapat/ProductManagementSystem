@@ -6,8 +6,7 @@ import {BsTelephone} from "react-icons/bs"
 import {AiOutlineMail} from "react-icons/ai"
 import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi"
 import { ImPinterest2 } from "react-icons/im"
-import "../styles/Footer.css"
-
+import "../../styles/Footer.css";
 
 const Footer = () => {
     return (

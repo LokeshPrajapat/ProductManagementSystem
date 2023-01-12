@@ -6,14 +6,17 @@ import { useUserAuth } from "../context/UserAuthContext";
 const Logout = () => {
   const { logOut, user } = useUserAuth();
   const navigate = useNavigate();
+
   const handleLogout = async () => {
     try {
       await logOut();
       navigate("/");
+      window.location.reload();
     } catch (error) {
       console.log(error.message);
     }
   };
+  
   return (
     <>
       <div className="p-4 box mt-3 text-center">

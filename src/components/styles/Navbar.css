@@ -1,51 +1,29 @@
 * {
-
     padding: 0;
-
     margin: 0;
-
     box-sizing: border-box;
-
 }
 
-
-
-.nav-links {
-
+.nav_links {
+    font-weight: 500;
+    color: #e7ab3c;
     padding: 0.5rem;
-
     justify-content: flex-end;
-
     position: relative;
-
     align-items: flex-end;
-
 }
 
-
-
-.nav-links:hover {
-
-    background-color: #e7ab3c;
-
-    color: #f0f0f2;
-
+/* .nav-links:hover {
+    color: #e7ab3c;
+    background-color: #f0f0f2;
     cursor: pointer;
-
     transition: ease-out all 0.2s;
-
-}
-
-
+} */
 
 .logo {
-
     justify-content: space-between;
-
     align-items: flex-start;
-
 }
-
 
 
 .logo h2 {

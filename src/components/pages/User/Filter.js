@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import Context from '../context/Context'
-import Home from './Home'
+import Context from '../../../context/Context'
+import Home from './UserDashboard'
 import Rating from './Rating'
 
 const Filter = () => {

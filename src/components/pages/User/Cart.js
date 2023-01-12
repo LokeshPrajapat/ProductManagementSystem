@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Card, Col, Image, ListGroup, ListGroupItem, Row,Form, Button } from 'react-bootstrap'
 import { AiFillDelete } from 'react-icons/ai'
 import { Navigate, useNavigate } from 'react-router-dom'
-import Context from '../context/Context'
+import Context from '../../../context/Context'
 import BillPreview from './BillPreview'
 import Rating from './Rating'
 

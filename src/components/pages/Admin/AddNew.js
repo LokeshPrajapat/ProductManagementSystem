@@ -1,14 +1,19 @@
 import React,{useState} from 'react'
+import { Form } from 'react-bootstrap'
 import { toast, ToastContainer } from 'react-toastify'
 import "../../styles/UpdateProduct.css"
 
 const AddNew = () => {
 
   const [addProduct, setAddProduct] = useState({
-    prodName: "",
-    prodCat: "",
-    prodUrl:"",
-    prodPrice:"",
+        prodName:"",
+        prodCat: "",
+        prodUrl: "",
+        prodPrice:"",
+        instock: "",
+        fastDelivery: "",
+        description:"",
+        rating: ""
   });
 
   const [success, setSuccess] = useState(false);
@@ -22,7 +27,7 @@ const AddNew = () => {
 
       var randomId = new Date().getUTCMilliseconds().toString();
 
-      fetch("http://localhost:5000/products", {
+      fetch("http://localhost:4000/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,6 +38,10 @@ const AddNew = () => {
        prodCat: addProduct.prodCat,
        prodUrl:addProduct.prodUrl,
        prodPrice:addProduct.prodPrice,
+       instock: addProduct.instock,
+       fastDelivery: addProduct.fastDelivery,
+       description:addProduct.description,
+       rating: addProduct.rating
       }),
     })
       .then((res) => {
@@ -92,6 +101,18 @@ const AddNew = () => {
             />
           </div>
           <br />
+          <div className="form-group">
+            <label htmlFor="text">Product Description: </label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter Product Description"
+              name="description"
+              value={addProduct.description}
+              onChange={changeHandler}
+            />
+          </div>
+          <br />
           <div className="form-group" style={{heigth:"4rem"}}>
             <label htmlFor="text">Product Image Url: </label>
             <textarea
@@ -103,6 +124,26 @@ const AddNew = () => {
               value={addProduct.prodUrl}
               onChange={changeHandler}
             />
+          </div>
+          <br />
+          <div className="form-group">
+            <label>Product Fast Delivery </label>
+              <Form.Select className="form-select" name="fastDelivery" value={addProduct.fastDelivery} onChange={changeHandler}>
+              <option value="true">true</option>
+              <option value="false">false </option>
+              </Form.Select>
+          </div>
+          <br />
+
+          <div className="form-group">
+            <label>Rating </label>
+              <Form.Select className="form-select" name="rating" value={addProduct.rating} onChange={changeHandler}>
+              <option value="1">1</option>
+              <option value="2">2 </option>
+              <option value="3">3 </option>
+              <option value="4">4 </option>
+              <option value="5">5 </option>
+              </Form.Select>
           </div>
           <br />
           <button className="button btn btn-success" type="submit" onClick={(e) => onFormSubmit(e)}>Add Product</button>

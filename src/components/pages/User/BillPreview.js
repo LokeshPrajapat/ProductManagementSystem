@@ -13,7 +13,7 @@ import {
   MDBTableBody,
 } from "mdb-react-ui-kit";
 import { useLocation } from 'react-router-dom';
-import Context from '../context/Context';
+import Context from '../../../context/Context';
 import { Button } from 'reactstrap';
 
 
